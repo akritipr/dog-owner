@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+    <ion-slides class="image-slider" loop="true">
+      <ion-slide *ngFor="let d of dogList">
+        <!-- <a href="#"  (click)="imageClicked()"> -->
+        <img src="assets/imgs/{{d.image}}" class="thumb-img"  />
+      <!-- </a> -->
+          <h2>{{d.name}}</h2>
+          <div>{{d.age}}</div>
+          <div>{{d.sex}}</div>
+          <div>{{d.breed}}</div>
+          <div>{{d.characteristics}}</div>
+          <button ion-button color="secondary" (click)="imageClicked(d)">Interested</button>
+      </ion-slide>
+    </ion-slides>
+
+</ion-content>
